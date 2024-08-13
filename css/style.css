@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Sacramento|Dancing+Script|Playfair+Display:400,700&display=swap');
+
+body {
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+}
+
+.content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    font-family: 'Playfair Display', serif;
+    color: white;
+}
+
+.corner-image {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+}
+
+.corner-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.top-left { top: 10px; left: 10px; }
+.top-right { top: 10px; right: 10px; }
+.bottom-left { bottom: 10px; left: 10px; }
+.bottom-right { bottom: 10px; right: 10px; }
+
+.button {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    display: none;
+}
+
+.button button {
+    border: none;
+    background: none;
+    color: black;
+}
+
+.button a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: black;
+    font-family: 'Sacramento', cursive;
+}
+
+#candle {
+    position: absolute;
+    bottom: 10%; 
+    left: 50%; 
+    transform: translate(-50%, 0); 
+    width: 40px;
+    height: 180px;
+    z-index: 10;
+    background: linear-gradient(to bottom, #ffddbb 0%, #ffcc88 50%, #ffbb55 100%);
+    border-radius: 20px;
+    box-shadow: 0 2px 20px 10px rgba(255, 189, 105, 0.6);
+}
+
+#flame {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,222,89,1) 0%, rgba(255,69,0,1) 100%);
+    box-shadow: 0 2px 15px 5px rgba(255, 69, 0, 0.8);
+}
+
+.glow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #ffd870;
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        opacity: 0.1;
+        box-shadow: 0 0 20px 10px #ffd870;
+    }
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 40px 20px #ffd870;
+    }
+}
